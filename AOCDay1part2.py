@@ -39,13 +39,12 @@ ReverseNumberDictionary1 = {
 }
 
 solution = 0
-lineindex = 1
 
 for line in lines:
+    line = 'QQ' + line + 'QQ'
     #find the location of the first integer written out
     x = NumberFinder(line, NumberDictionary1)
     y = NumberFinder(line[::-1], ReverseNumberDictionary1)
     solution += 10*x+y
-    lineindex += 1
-    print(line)
-    print(lineindex, x, y, 10*x+y, solution)
+
+print(solution)
